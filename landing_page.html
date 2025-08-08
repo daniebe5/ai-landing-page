@@ -27,27 +27,55 @@ body {
 .container { max-width: 900px; margin: auto; padding: 20px; }
 /* Header uses a deep, dark tone with golden accent */
 header {
-  /* Rich gradient from warm gold to deep black */
-  background: linear-gradient(to right, rgba(212, 175, 55, 0.85), rgba(10, 10, 10, 0.9));
+  /* Gradient inspired by the hero image: dark brown fading into golden tones */
+  background: linear-gradient(to right, #1f1304 0%, #4b3108 40%, #9f6f0d 70%, #dca530 100%);
   color: #f5f5f5;
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
   border-bottom: 2px solid #2c2c2c;
 }
 /* Larger, striking headline in gold */
 header h1 {
   margin: 0;
-  font-size: 3rem;
-  color: #d4af37;
+  font-size: 3.5rem;
+  /* Warm orange tone for the main headline */
+  color: #e86f27;
   line-height: 1.3;
+  font-weight: 700;
+}
+
+/* Style for the secondary headline with green highlight */
+header .hero-subtitle {
+  margin: 10px 0 0;
+  font-size: 2.2rem;
+  color: #e86f27;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  /* Ensure the subtitle appears above the highlight */
+  z-index: 1;
+}
+
+header .hero-subtitle::after {
+  content: "";
+  position: absolute;
+  /* Position the highlight slightly below the text */
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: #64d05e;
+  border-radius: 10px;
+  z-index: 0;
 }
 header p {
-  margin-top: 18px;
+  margin-top: 20px;
   /* Slightly larger tagline for readability */
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   /* Lightened color for better contrast */
-  color: #d8d8d8;
-  line-height: 1.6;
+  color: #f0f0f0;
+  line-height: 1.5;
 }
 section {
   margin-top: 30px;
@@ -160,16 +188,11 @@ ul li::before {
 </head>
 <body>
 <header>
-  <h1>
-    <span class="highlight-gold">בנה את האתר שלך עם AI</span><br>
-    <span class="highlight-blue highlight-underline">בלי לדעת קוד</span> · <span class="highlight-brown highlight-underline">בלי להשקיע שקל אחד!</span>
-  </h1>
-  <p>
-    קורס מעשי של 3 מפגשים אונליין שילמד אותך איך לייצר
-    <span class="highlight-gold">אתרים</span>, <span class="highlight-brown">אפליקציות</span> ו
-    <span class="highlight-blue">דפי נחיתה</span> בעזרת
-    <span class="highlight-white">בינה מלאכותית בלבד</span>
-  </p>
+  <!-- Main headline split into two lines for better control over styling -->
+  <h1>בנה את האתר שלך עם AI</h1>
+  <h2 class="hero-subtitle">בלי לדעת קוד · בלי להשקיע שקל אחד!</h2>
+  <!-- Tagline simplified without highlighted spans -->
+  <p>קורס מעשי של 3 מפגשים אונליין שילמד אותך איך לייצר אתרים, אפליקציות ודפי נחיתה בעזרת בינה מלאכותית בלבד</p>
 </header>
 <div class="container">
 <section>
