@@ -17,13 +17,20 @@ body {
   color: #e5e5e5;
   line-height: 1.7;
 }
+
+/* Underlined highlight for important phrases */
+.highlight-underline {
+  text-decoration: underline;
+  text-decoration-color: #d4af37;
+  text-underline-offset: 4px;
+}
 .container { max-width: 900px; margin: auto; padding: 20px; }
 /* Header uses a deep, dark tone with golden accent */
 header {
-  /* Deep gradient with dark blue blending into black */
-  background: linear-gradient(135deg, #0c1f3d, #0a0a0a);
+  /* Rich gradient from warm gold to deep black */
+  background: linear-gradient(to right, rgba(212, 175, 55, 0.85), rgba(10, 10, 10, 0.9));
   color: #f5f5f5;
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
   border-bottom: 2px solid #2c2c2c;
 }
@@ -35,10 +42,12 @@ header h1 {
   line-height: 1.3;
 }
 header p {
-  margin-top: 15px;
-  font-size: 1.4rem;
-  color: #c5c5c5;
-  line-height: 1.5;
+  margin-top: 18px;
+  /* Slightly larger tagline for readability */
+  font-size: 1.5rem;
+  /* Lightened color for better contrast */
+  color: #d8d8d8;
+  line-height: 1.6;
 }
 section {
   margin-top: 30px;
@@ -61,6 +70,17 @@ section ul li {
   font-size: 1.15rem;
   line-height: 1.5;
 }
+
+/* Emoji styling for list items to match premium design */
+span.emoji {
+  /* Larger size for emphasis */
+  font-size: 1.4rem;
+  /* Golden hue to align with theme */
+  color: #d4af37;
+  /* Space on the right (RTL direction) to separate from text */
+  margin-right: 8px;
+  vertical-align: middle;
+}
 section h2 {
   font-size: 2rem;
   margin-bottom: 18px;
@@ -71,21 +91,21 @@ ul { list-style-type: none; padding: 0; }
 ul li { margin-bottom: 10px; padding-right: 30px; position: relative; }
 /* Golden check marks for list bullets */
 ul li::before {
-  content: "✔️";
+  /* Do not display default check mark when using custom emojis */
+  content: "";
   position: absolute;
   right: 0;
   top: 0;
-  font-size: 1.2rem;
-  /* Golden hue for premium feel */
-  color: #c59d5f;
+  font-size: 0;
+  color: transparent;
 }
 .price {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #d4af37;
   font-weight: bold;
   text-align: center;
   margin: 0;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 /* CTA section */
 .cta {
@@ -93,19 +113,20 @@ ul li::before {
   margin-top: 25px;
 }
 .cta a {
-  background: #c59d5f;
+  /* Golden button matching header accents */
+  background: #d4af37;
   color: #0e0e0e;
-  padding: 20px 50px;
+  padding: 22px 55px;
   text-decoration: none;
   border-radius: 50px;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
   transition: background 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .cta a:hover {
-  background: #b08f4f;
+  background: #c59d5f;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 .cta p {
@@ -141,7 +162,7 @@ ul li::before {
 <header>
   <h1>
     <span class="highlight-gold">בנה את האתר שלך עם AI</span><br>
-    <span class="highlight-blue">בלי לדעת קוד</span> · <span class="highlight-brown">בלי להשקיע שקל אחד!</span>
+    <span class="highlight-blue highlight-underline">בלי לדעת קוד</span> · <span class="highlight-brown highlight-underline">בלי להשקיע שקל אחד!</span>
   </h1>
   <p>
     קורס מעשי של 3 מפגשים אונליין שילמד אותך איך לייצר
@@ -154,12 +175,12 @@ ul li::before {
 <section>
   <h2>🧠 מה תלמד?</h2>
   <ul>
-    <li>איך לבנות אתר מקצועי מאפס – ללא מתכנת</li>
-    <li>איך לייצר אפליקציה אמיתית תוך דקות בעזרת AI</li>
-    <li>איך ליצור דפי נחיתה מעוצבים שממירים</li>
-    <li>איך לחבר אמצעי תשלום, טפסים, ניתוחים ועוד</li>
-    <li>איך להעלות את האתר לרשת ולהתחיל להרוויח</li>
-    <li>ואפילו – איך למכור את השירות הזה לאחרים ולייצר הכנסה!</li>
+    <li><span class="emoji">🤖</span>איך לבנות אתר מקצועי מאפס – ללא מתכנת</li>
+    <li><span class="emoji">📱</span>איך לייצר אפליקציה אמיתית תוך דקות בעזרת AI</li>
+    <li><span class="emoji">🖥️</span>איך ליצור דפי נחיתה מעוצבים שממירים</li>
+    <li><span class="emoji">🔗</span>איך לחבר אמצעי תשלום, טפסים, ניתוחים ועוד</li>
+    <li><span class="emoji">🚀</span>איך להעלות את האתר לרשת ולהתחיל להרוויח</li>
+    <li><span class="emoji">💰</span>ואפילו – איך למכור את השירות הזה לאחרים ולייצר הכנסה!</li>
   </ul>
 </section>
 <section>
@@ -169,19 +190,19 @@ ul li::before {
 <section>
   <h2>🛠 מה תקבל?</h2>
   <ul>
-    <li>גישה מלאה לכלים הכי חזקים בשוק (חינמיים לגמרי!)</li>
-    <li>תבניות מוכנות לדפי נחיתה ואתרים</li>
-    <li>רשימת כלים ותוספים שיחסכו לך אלפי שקלים</li>
-    <li>תמיכה גם אחרי ההדרכה – לשאלות ותקלות</li>
-    <li>קורס בונוס: איך למצוא לקוחות ולהתחיל למכור אתרים ב־5,000 ₪ ומעלה</li>
+    <li><span class="emoji">🧰</span>גישה מלאה לכלים הכי חזקים בשוק (חינמיים לגמרי!)</li>
+    <li><span class="emoji">📄</span>תבניות מוכנות לדפי נחיתה ואתרים</li>
+    <li><span class="emoji">🧩</span>רשימת כלים ותוספים שיחסכו לך אלפי שקלים</li>
+    <li><span class="emoji">🤝</span>תמיכה גם אחרי ההדרכה – לשאלות ותקלות</li>
+    <li><span class="emoji">🎁</span>קורס בונוס: איך למצוא לקוחות ולהתחיל למכור אתרים ב־5,000 ₪ ומעלה</li>
   </ul>
 </section>
 <section>
   <h2>💥 מי זה מתאים?</h2>
   <ul>
-    <li>יזמים ובעלי עסקים שרוצים שליטה מלאה בנכסים שלהם</li>
-    <li>אנשים בלי ידע טכני שרוצים לבנות בעצמם</li>
-    <li>כל מי שרוצה להיכנס לעולם ה־AI ולהתחיל לייצר הכנסה</li>
+    <li><span class="emoji">👔</span>יזמים ובעלי עסקים שרוצים שליטה מלאה בנכסים שלהם</li>
+    <li><span class="emoji">👨‍💻</span>אנשים בלי ידע טכני שרוצים לבנות בעצמם</li>
+    <li><span class="emoji">🚀</span>כל מי שרוצה להיכנס לעולם ה־AI ולהתחיל לייצר הכנסה</li>
   </ul>
 </section>
 <section>
